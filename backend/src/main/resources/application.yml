@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fortir
+    username: fortir
+    password: example
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:/changelog/changelog.xml
+  cache:
+    jcache:
+      config: ehcache.xml
+logging:
+  level:
+    liquibase: INFO
+server:
+  port: 8887

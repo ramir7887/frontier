@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <include file="changes/create-table-hello.sql" relativeToChangelogFile="true"/>
+    <include file="changes/1-branch-service-create-table.sql" relativeToChangelogFile="true"/>
+    <include file="changes/2-subject-create-table.sql" relativeToChangelogFile="true" />
+    <include file="changes/3-branch-science-insert.sql" relativeToChangelogFile="true" />
+    <include file="changes/4-subject-insert.sql" relativeToChangelogFile="true" />
+    <include file="changes/5-subject-market-create.sql" relativeToChangelogFile="true" />
+    <include file="changes/6-alter-table-subject-market.sql" relativeToChangelogFile="true" />
+    <include file="changes/8-alter-table-subject-market.sql" relativeToChangelogFile="true" />
+    <include file="changes/9-alter-table-subject-market.sql" relativeToChangelogFile="true" />
+    <include file="changes/10-alter-table-subject-market.sql" relativeToChangelogFile="true" />
+    <include file="changes/7-insert-subject-market.sql" relativeToChangelogFile="true" />
+    <include file="changes/11-create-marker-table.sql" relativeToChangelogFile="true" />
+    <include file="changes/12-market-table-insert.sql" relativeToChangelogFile="true" />
+    <include file="changes/13-create-table-source.sql" relativeToChangelogFile="true" />
+    <include file="changes/14-alter-sequence-subject.sql" relativeToChangelogFile="true" />
+    <include file="changes/15-alter-sequence-subject.sql" relativeToChangelogFile="true" />
+    <include file="changes/16-alter-sequence-market.sql" relativeToChangelogFile="true" />
+</databaseChangeLog>

@@ -1,0 +1,1 @@
+SELECT setval('subject_science_id_seq', 135);
