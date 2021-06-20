@@ -54,3 +54,14 @@ npm run serve
 * Установить **maven**: https://maven.apache.org/
 * выполнить в корне проекта **mvn clean package**
 * запустить сервер java -jar target/*.jar
+
+#№ Сервис работы с патентами. 
+
+#### Используется: 
+* Python 3
+* Flask
+
+### Запуск
+* Установить Python: https://www.python.org/downloads/
+* Установить зависимости: pip install -r requirements.txt
+* Запустить сервис: python patent_service.py
