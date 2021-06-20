@@ -19,6 +19,16 @@ const routes = [
         path: "/charts",
         name: "Charts",
         component: () => import("./views/ChartsPage.vue")
+    },
+    {
+        path: "/diagramm",
+        name: "Diagramm",
+        component: () => import("./views/DiagrammPage.vue")
+    },
+    {
+        path: "/tag-clouds",
+        name: "TagCloud",
+        component: () => import("./views/TagCloudPage.vue")
     }
 ];
 

@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <div class="heading">
-            <h1>Области наук</h1>
+            <h1 class="title">Научные области</h1>
 
             <div class="buttons">
                 <v-btn outlined color="primary" class="mr-2" @click="$refs.addSubjectModal.open()">
@@ -29,6 +29,7 @@
                 :frontiers-amount="s.frontirCount"
                 :subjects-amount="s.subjectCount"
                 :selected="s.selected"
+                :icons="s.icons"
                 @toggleSelect="s.selected = !s.selected"
             />
         </section>
@@ -51,9 +52,24 @@ export default {
     }),
     async mounted() {
         const branches = (await httpClient().get("/branch")).data;
+        const icons = {
+            2: "mathematics",
+            1: "mechanical",
+            3: "computer",
+            4: "physic",
+            5: "chemical",
+            6: "biological",
+            7: "health",
+            8: "medicine",
+            9: "earth",
+            10: "social",
+            11: "humanities",
+        }
+
         this.scienceBranches = branches.map(b => ({
             ...b,
-            selected: false
+            selected: false,
+            icons: require("../assets/img/" + icons[b.branchScience.id]+".svg")
         }));
     },
 	watch: {
@@ -87,6 +103,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.title{
+    color: #2b2b2b
+}
+
 .heading {
     display: flex;
     align-items: center;

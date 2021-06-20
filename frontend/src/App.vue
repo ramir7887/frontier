@@ -1,11 +1,11 @@
 <template>
     <v-app>
         <header>
-            <router-link to="/" class="logo"></router-link>
-            <div class="switch">
-                <span>Области</span>
-                <v-switch color="primary" :value="switchValue" @change="toggleSwitch" />
-                <span>Источники</span>
+            <div class="d-flex">
+            <router-link to="/" class="logo">
+                <v-img class="logo" src="./assets/img/logo1.png" alt="Subject in promising direction"></v-img>
+            </router-link>
+            <div class="title align-center  ml-4 my-auto text-h4 font-weight-bold" color="green">Фронтир NG</div>
             </div>
         </header>
 
@@ -57,8 +57,11 @@ header {
     .logo {
         width: 45px;
         height: 45px;
-        background: #10b981;
+        /*background: #10b981;*/
         border-radius: 50%;
+    }
+    .title {
+        color: #10b981;
     }
 
     .switch {
