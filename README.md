@@ -41,50 +41,16 @@ npm run serve
 ...
 ~~~
 
+#№ Серверная часть решения. 
 
-### Установка пакета name
+#### Используется: 
+* Java 11
+* Spring Boot
+* Liquibase (миграции БД)
+* ehcache(in-memory cache)
 
-Выполните 
-~~~
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install name1
-sudo apt-get install mariadb-client mariadb-server
-git clone https://github.com/Sinclear/default_readme
-cd default_readme
-...
-~~~
-### База данных
-
-Необходимо создать пустую базу данных, а подключение к базе прописать в конфигурационный файл сервиса по адресу: папка_сервиса/...
-~~~
-sudo systemctl restart mariadb
-sudo mysql_secure_installation
-mysql -u root -p
-mypassword
-CREATE DATABASE mynewdb;
-quit
-~~~
-### Выполнение миграций
-
-Для заполнения базы данных системной информацией выполните в корневой папке сервиса: 
-~~~
-mysql -u root -p -f mynewdb < папка_сервиса/...
-mypassword
-~~~
-и согласитесь с запросом
-
-### Установка зависимостей проекта
-
-Установка зависимостей осуществляется с помощью [Composer](http://getcomposer.org/). Если у вас его нет вы можете установить его по инструкции
-на [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
-
-После этого выполнить команду в директории проекта:
-
-~~~
-composer install
-~~~
-
-РАЗРАБОТЧИКИ
-
-<h4>Иванов Иван fullstack https://t.me/test@name1 </h4>
+### Запуск
+* Установить **JDK 11 Liberica**: https://bell-sw.com/pages/downloads/#/java-11-lts
+* Установить **maven**: https://maven.apache.org/
+* выполнить в корне проекта **mvn clean package**
+* запустить сервер java -jar target/*.jar
